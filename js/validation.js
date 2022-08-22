@@ -1,14 +1,14 @@
 "use strict";
 
 if (!localStorage.getItem("token")) {
-  window.location = "/login.html";
+  window.location = "/index.html";
 }
 
 let elLogOut = document.querySelector(".log__out");
 
 elLogOut.addEventListener("click", function () {
   localStorage.removeItem("token");
-  window.location.href = "/login.html"
+  window.location.href = "/index.html"
 });
 
 let elTotalResult = document.querySelector(".total__result");
