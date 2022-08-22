@@ -47,7 +47,7 @@ let currentPage = 1;
 let pages;
 
 let localPokemons = JSON.parse(localStorage.getItem("bookmarkedPokemons"));
-elBookmarkResult.textContent = localPokemons.length;
+// elBookmarkResult.textContent = localPokemons.length;
 
 let bookmarkedPokemons = localPokemons ? localPokemons : [];
 renderBookmarks(bookmarkedPokemons);
