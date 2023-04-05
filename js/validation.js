@@ -8,7 +8,7 @@ let elLogOut = document.querySelector(".log__out");
 
 elLogOut.addEventListener("click", function () {
   localStorage.removeItem("token");
-  window.location.href = "/index.html"
+  window.location.href = "/index.html";
 });
 
 let elTotalResult = document.querySelector(".total__result");
@@ -51,7 +51,7 @@ let localPokemons = JSON.parse(localStorage.getItem("bookmarkedPokemons"));
 
 let bookmarkedPokemons = localPokemons ? localPokemons : [];
 renderBookmarks(bookmarkedPokemons);
-
+elBookmarkResult.textContent = bookmarkedPokemons.length;
 
 // Normalize Pokemons:
 let normalizedArray = pokemonsArray.map(function (item) {
@@ -288,6 +288,7 @@ elBookmarkList.addEventListener("click", function (evt) {
     let foundBookmarkedPokemon = bookmarkedPokemons.findIndex(function (item) {
       return item.id == bookmarketPokemonId;
     });
+    console.log(foundBookmarkedPokemon);
 
     bookmarkedPokemons.splice(foundBookmarkedPokemon, 1);
     localStorage.setItem(
